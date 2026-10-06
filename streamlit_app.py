@@ -88,7 +88,7 @@ with form_col:
         activity = b.number_input("Activity hours / day", min_value=0.0, max_value=24.0, value=1.0, step=0.5)
         sleep = c.number_input("Sleep hours / night", min_value=0.0, max_value=24.0, value=7.0, step=0.5)
         stress = st.select_slider("Perceived stress level", options=["Low", "Medium", "High", "Very High"], value="Medium")
-        submitted = st.form_submit_button("Read my signal", use_container_width=True)
+        submitted = st.form_submit_button("Read my signal", width="stretch")
 
 with result_col:
     st.subheader("Your signal")
@@ -137,5 +137,5 @@ with st.expander("Model comparison and project links"):
         {"Model": "Linear regression", "Test R²": 0.740, "Test MAE": 0.536},
         {"Model": "Random forest (deployed)", "Test R²": 0.878, "Test MAE": 0.347},
         {"Model": "Random forest (tuned)", "Test R²": 0.865, "Test MAE": 0.369},
-    ]), hide_index=True, use_container_width=True)
+    ]), hide_index=True, width="stretch")
     st.link_button("View the GitHub repository", "https://github.com/ShreyanshJoshi4444/Mental-Health-Project")
